@@ -8,8 +8,9 @@ __pycache__/
 Makefile
 
 # Crap
-.swp
 .DS_Store
+*.swp
+*.swo
 
 # C extensions
 *.so

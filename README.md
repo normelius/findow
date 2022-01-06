@@ -41,7 +41,7 @@ When the symbol has been obtained, historical data can be fetched with
 >>> import findow as fd
 
 >>> df = fd.historical(1173182, from_date = "2020-01-01", to_date = "2022-01-01")
->>> print(df)
+>>> print(df.tail())
 ````
 
 |     | Date                |     Price |      Open |      High |       Low |        Volume |

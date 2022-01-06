@@ -68,6 +68,7 @@ def historical(symbol_id: int, from_date: str, to_date: str) -> pd.DataFrame:
   soup = BeautifulSoup(response.text, features = "lxml")
   table = soup.find_all("table")
   out = pd.read_html(str(table))[0]
+  # Todo: Should return an empty dataframe here in case no result is found.
   
   out["Date"] = pd.to_datetime(out.Date)
   
@@ -92,10 +93,8 @@ def historical(symbol_id: int, from_date: str, to_date: str) -> pd.DataFrame:
 
 
 def main():
-  df = historical(1173198, "2020-01-01", "2022-01-01")
-  print(df)
-  #print(df.tail(5).to_markdown(tablefmt = "grid"))
-  #print(df)
+  df = historical(1173182, from_date = "2010-01-01", to_date = "2022-01-01")
+  #print(df.tail().to_markdown())
 
 
 

@@ -47,7 +47,7 @@ def search(quote: str) -> pd.DataFrame:
 
 def main():
   df = search("shiba inu")
-  #print(df.to_markdown(tablefmt = "grid"))
+  print(df.to_markdown())
 
 if __name__ == '__main__':
     main()
