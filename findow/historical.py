@@ -92,12 +92,3 @@ def historical(symbol_id: int, from_date: str, to_date: str) -> pd.DataFrame:
   return out
 
 
-def main():
-  df = historical(1173182, from_date = "2010-01-01", to_date = "2022-01-01")
-  #print(df.tail().to_markdown())
-
-
-
-if __name__ == '__main__':
-    main()
-

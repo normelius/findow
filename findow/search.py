@@ -45,10 +45,3 @@ def search(quote: str) -> pd.DataFrame:
   return df
 
 
-def main():
-  df = search("shiba inu")
-  print(df.to_markdown())
-
-if __name__ == '__main__':
-    main()
-
